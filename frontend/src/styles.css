@@ -1,0 +1,82 @@
+:root{--bg:#0b1020;--panel:#121832;--text:#e9edf7;--muted:#9aa4c7;--accent:#6aa6ff;--accent2:#86efac}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,Segoe UI,Roboto,Arial}
+.container{max-width:1100px;margin:0 auto;padding:24px}
+.panel{background:var(--panel);border:1px solid #1b2347;border-radius:12px;padding:16px}
+.hstack{display:flex;gap:12px;align-items:center}
+.vstack{display:flex;gap:12px;flex-direction:column}
+.input{flex:1;border:1px solid #243054;background:#0d1330;color:var(--text);padding:12px 14px;border-radius:10px}
+.button{background:var(--accent);color:#08203a;padding:12px 16px;border:none;border-radius:10px;font-weight:600;cursor:pointer}
+.button.secondary{background:#243054;color:var(--text)}
+.badge{background:#1b2347;color:var(--muted);padding:4px 8px;border-radius:999px;font-size:12px}
+.result{border:1px solid #1b2347;border-radius:12px;padding:12px}
+.score{color:var(--accent2);font-weight:700}
+.timestamp{color:var(--accent);cursor:pointer}
+.section-title{margin:0 0 8px 0;font-size:14px;color:var(--muted);text-transform:uppercase;letter-spacing:.12em}
+
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.video-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.results-section {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.timestamp-card {
+  background: #1e1e2f;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 12px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.timestamp-card:hover {
+  background: #292942;
+}
+
+.timestamp-header {
+  font-weight: bold;
+  margin-bottom: 6px;
+  color: #4cafef;
+}
+
+.timestamp-snippet {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.jump-btn {
+  margin-top: 8px;
+  background: #4cafef;
+  border: none;
+  padding: 6px 12px;
+  color: white;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.jump-btn:hover {
+  background: #3a8bcc;
+}
+
+.timestamp-card.active {
+  border: 2px solid #4cafef;
+  box-shadow: 0 0 12px #4cafef;
+  background: #252545;
+}
+
