@@ -11,7 +11,7 @@ router = APIRouter()
 logger = logging.getLogger(__name__)
 
 
-def _rid() -> str:
+def _rid() -> str: 
     return uuid4().hex[:12]
 
 
