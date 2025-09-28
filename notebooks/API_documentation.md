@@ -1,15 +1,16 @@
-## API Documentation
+### Endpoint
+`POST /search`
 
-### Endpoint: POST /search
-**Description:** Takes a user query and returns the top 3 most relevant timestamps with transcript snippets.  
+### Description
+Takes a user query and returns the top 3 most relevant timestamps with transcript snippets.
 
-**Request Body (JSON):**
+### Request Body (JSON)
 ```json
-{ "query": "machine learning" }
-Response Example:
+{
+  "query": "machine learning"
+}
 
-json
-Copy code
+Response Example
 {
   "results": [
     {
@@ -30,16 +31,17 @@ Copy code
   ]
 }
 
-Endpoint: POST /upload
+### Endpoint
+`POST /upload`
 
-Description: Uploads a new lecture video or subtitle file for indexing.
+### Description
+Uploads a new lecture video or subtitle file for indexing.
 
-Request (multipart/form-data):
+### Request (multipart/form-data)
+- **file**: Video file (`.mp4`) or subtitle file (`.srt`)
 
-file: Video file (.mp4) or subtitle file (.srt)
-
-Response Example:
-
+### Response Example
+```json
 {
   "message": "Lecture uploaded successfully",
   "file_name": "lecture1.mp4"
