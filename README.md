@@ -19,34 +19,7 @@ It is built as part of the 10-day project briefs with a focus on **Retrieval-Aug
 - **metrics/** →  CSV/Notebook for evaluation metrics  
 - **README.md** →  Project overview & instructions  
 
----
-
-## ▶️ Run locally 
-
-### 1️⃣ Backend (Python 3.10+)
-```bash
-cd backend
-python -m venv .venv
-source .venv/bin/activate   
-pip install -r requirements.txt
-uvicorn app:app --reload --port 8000
- 
-
----
-
-2. Frontend (React + Vite):
-```bash
-cd frontend
-npm install
-npm run dev
 ```
-
-## API (short)
-- `POST /ingest_video` — ingest video URL or file, returns `video_id`
-- `POST /search_timestamps` — {query, k=3} → {results:[{t_start,t_end,snippet,score}], answer}
-
-Project Structure
-
 QEAGLE NEW
 ├── backend
 │   ├── .venv/
@@ -80,8 +53,35 @@ QEAGLE NEW
 └── README.md
 
 
-Project Output Screenshots
-Frontend
+---
 
-![alt text](image-1.png)
-![alt text](image.png)
+## ▶️ Run locally 
+
+### 1️⃣ Backend (Python 3.10+)
+```bash
+cd backend
+python -m venv .venv
+source .venv/bin/activate   
+pip install -r requirements.txt
+uvicorn app:app --reload --port 8000
+ 
+
+---
+
+2. Frontend (React + Vite):
+```bash
+cd frontend
+npm install
+npm run dev
+```
+
+## API (short)
+- `POST /ingest_video` — ingest video URL or file, returns `video_id`
+- `POST /search_timestamps` — {query, k=3} → {results:[{t_start,t_end,snippet,score}], answer}
+
+
+## 📸 Project Output Screenshots (Frontend)
+
+![Lecture Navigator](Output/UI.png)
+![Lecture Navigator - Alt](Output/UI1.png)
+
