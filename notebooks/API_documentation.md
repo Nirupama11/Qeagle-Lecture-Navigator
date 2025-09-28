@@ -1,43 +1,15 @@
-Overview
+## API Documentation
 
-The Lecture Navigator API allows users to search inside lecture videos and retrieve the most relevant timestamps for a given keyword or concept. The backend is built with FastAPI and supports both keyword and semantic search using embeddings.
+### Endpoint: POST /search
+**Description:** Takes a user query and returns the top 3 most relevant timestamps with transcript snippets.  
 
-Base URL (local):
-
-http://127.0.0.1:8000
-
-Endpoints
-🔹 Health Check
-
-Endpoint:
-GET /health
-
-Description:
-Checks if the API server is running.
-
+**Request Body (JSON):**
+```json
+{ "query": "machine learning" }
 Response Example:
 
-{
-  "status": "ok"
-}
-
-🔹 Search Transcript
-
-Endpoint:
-POST /search
-
-Description:
-Takes a user query and returns the top 3 most relevant timestamps with transcript snippets.
-
-Request Body (JSON):
-
-{
-  "query": "machine learning"
-}
-
-
-Response Example:
-
+json
+Copy code
 {
   "results": [
     {
@@ -58,13 +30,9 @@ Response Example:
   ]
 }
 
-🔹 Upload Lecture (Optional – if supported)
+Endpoint: POST /upload
 
-Endpoint:
-POST /upload
-
-Description:
-Uploads a new lecture video or subtitle file for indexing.
+Description: Uploads a new lecture video or subtitle file for indexing.
 
 Request (multipart/form-data):
 
