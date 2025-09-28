@@ -1,0 +1,68 @@
+
+---
+
+# 📄 2. OpenAPI Specification (openapi.yaml)  
+
+
+```yaml
+openapi: 3.0.0
+info:
+  title: Lecture Navigator API
+  version: 1.0.0
+  description: API for uploading lecture videos and searching transcripts by query.
+
+paths:
+  /upload:
+    post:
+      summary: Upload a lecture video or subtitle file
+      description: Uploads a new lecture video (.mp4) or subtitle file (.srt) for indexing.
+      requestBody:
+        required: true
+        content:
+          multipart/form-data:
+            schema:
+              type: object
+              properties:
+                file:
+                  type: string
+                  format: binary
+      responses:
+        '200':
+          description: Successful upload
+          content:
+            application/json:
+              example:
+                message: "Lecture uploaded successfully"
+                file_name: "lecture1.mp4"
+
+  /search:
+    post:
+      summary: Search for timestamps in lecture transcripts
+      description: Takes a user query and returns the top 3 most relevant timestamps with transcript snippets.
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                query:
+                  type: string
+              example:
+                query: "machine learning"
+      responses:
+        '200':
+          description: Search results
+          content:
+            application/json:
+              example:
+                results:
+                  - timestamp: "00:12:35"
+                    text: "In this section, we discuss machine learning fundamentals"
+                    similarity_score: 0.92
+                  - timestamp: "00:34:10"
+                    text: "Supervised learning is a subset of machine learning"
+                    similarity_score: 0.88
+                  - timestamp: "01:02:50"
+                    text: "Applications of machine learning include speech recognition"
+                    similarity_score: 0.85
