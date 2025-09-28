@@ -79,10 +79,10 @@ npm run dev
 - `POST /ingest_video` — ingest video URL or file, returns `video_id`
 - `POST /search_timestamps` — {query, k=3} → {results:[{t_start,t_end,snippet,score}], answer}
 
-
 ## 🏛️ Architecture Diagram
 
-![Architecture Diagram](./arch%20final.png)
+![Lecture Navigator](LectureNavigator/arch_final.png)
+
 
 
 
