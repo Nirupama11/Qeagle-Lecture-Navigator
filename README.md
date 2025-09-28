@@ -80,6 +80,12 @@ npm run dev
 - `POST /search_timestamps` — {query, k=3} → {results:[{t_start,t_end,snippet,score}], answer}
 
 
+## 🏛️ Architecture Diagram
+
+![Architecture Diagram](./arch%20final.png)
+
+
+
 ## 📸 Project Output Screenshots (Frontend)
 
 ![Lecture Navigator](Output/UI.png)
