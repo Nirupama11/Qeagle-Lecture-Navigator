@@ -35,7 +35,7 @@ Response Example:
  Upload Lecture
 
 Endpoint: POST /upload
-Description: Uploads a new lecture video or subtitle file for indexing.
+Description: Uploads a lecture video link.
 
 Response Example:
 
