@@ -1,6 +1,6 @@
-## 📘 Lecture Navigator API Documentation
+## Lecture Navigator API Documentation
 
-### 🔍 Search Lecture
+### Search Lecture
 **Endpoint:** `POST /search`  
 **Description:** Takes a user query and returns the top 3 most relevant timestamps with transcript snippets.  
 
@@ -32,7 +32,7 @@ Response Example:
   ]
 }
 
-⬆️ Upload Lecture
+ Upload Lecture
 
 Endpoint: POST /upload
 Description: Uploads a new lecture video or subtitle file for indexing.

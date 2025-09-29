@@ -6,7 +6,7 @@ It is built as part of the 10-day project briefs with a focus on **Retrieval-Aug
 
 ## 🛠️ What I built
 -  Transcript ingestion (YouTube/Vimeo/SubRip) → segmented (30–60s windows with overlap)  
--  Embeddings stored in Vector DB (MongoDB Atlas / Pinecone)  
+-  Embeddings stored in Vector DB (MongoDB Atlas)  
 -  Hybrid retrieval: **Vector search + BM25 keyword search + Cross-encoder reranker**  
 -  FastAPI backend with `/ingest_video`, `/search_timestamps`  
 -  React frontend (search box, results list, mini-player deep links)  
@@ -55,9 +55,9 @@ QEAGLE NEW
 
 ---
 
-## ▶️ Run locally 
+##  Run locally 
 
-### 1️⃣ Backend (Python 3.10+)
+### 1️. Backend (Python 3.10+)
 ```bash
 cd backend
 python -m venv .venv
